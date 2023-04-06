@@ -4,13 +4,13 @@ Source code for http://www.fc00.org (http://h.fc00.org on Hyperboria).
 
 ## Sending your view of the network
 
-In order to display accurate map of Hyperboria fc00 need your help. If you run CJDNS node, please send your network view using sendGraph.py script.
+In order to display accurate map of Hyperboria fc00 we need your help. If you run CJDNS node, please send your network view using sendGraph.py script.
 
 ```bash
-# Install requests and cjdns for Python 3
+# Install the Python3 packages: requests and cjdns
 pip3 install cjdns requests
 # Get the script
-wget https://raw.githubusercontent.com/zielmicha/fc00.org/master/scripts/sendGraph.py
+wget https://raw.githubusercontent.com/cjdelisle/fc00.org/master/scripts/sendGraph.py
 # Edit configuration
 nano sendGraph.py
 chmod +x sendGraph.py
@@ -23,7 +23,7 @@ chmod +x sendGraph.py
 
 ## Web server
 ```bash
-git clone git@github.com:zielmicha/fc00.org.git
+git clone git@github.com:cjdelisle/fc00.org.git
 git clone git@github.com:zielmicha/nodedb.git web/nodedb
 sudo apt-get install python-flask python-flup python-mysqldb python-pygraphviz
 
