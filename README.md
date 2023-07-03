@@ -35,6 +35,42 @@ sudo apt-get install python-flask python-flup python-pymysql python-pygraphviz
 sudo emerge --ask dev-python/flask dev-python/pymysql dev-python/pygraphviz
 
 cd fc00.org/web
+
+Configuring an SQL server:
+On Gentoo:
+sudo echo "dev-db/mysql server" > /etc/portage/package.use/mysql 
+sudo emerge --ask dev-db/mysql (Follow instructions on https://wiki.gentoo.org/wiki/MySQL for setup)
+
+Createing the required database, tables and columns
+mysql -u root -p
+CREATE DATABASE cjdns;
+USE cjdns;
+CREATE TABLE nodes (
+ip varchar(255),
+name varchar(255),
+version varchar(255),
+first_seen varchar(255),
+last_seen varchar(255)
+);
+CREATE TABLE edges (
+a varchar(255),
+b varchar(255),
+first_seen varchar(255),
+last_seen varchar(255),
+uploaded_by varchar(255)
+);
+#Confirm that the apropriate tables have been created
+SHOW TABLES;
+#and that they have the correct columns
+SHOW COLUMNS FROM nodes;
+SHOW COLUMNS FROM edges;
+#If correct
+EXIT;
+
+cp web_config.example.cfg web_config.cfg
+vim web_config.cfg
+#Set the appropriate MYSQL_DATABASE_USER, MYSQL_DATABASE_PASSWORD, MYSQL_DATABASE_PORT (if sql not running on the default 3306) and MYSQL_DATABASE_HOST (if sql not running on the same machine)
+
 python web.py
 ```
 
