@@ -38,8 +38,8 @@ sudo emerge --ask dev-python/flask dev-python/pymysql dev-python/pygraphviz
 
 Configuring an SQL server:
 On Gentoo:
-sudo echo "dev-db/mysql server" > /etc/portage/package.use/mysql 
-sudo emerge --ask dev-db/mysql (Follow instructions on https://wiki.gentoo.org/wiki/MySQL for setup)
+echo "dev-db/mysql server" | sudo tee /etc/portage/package.use/mysql
+sudo emerge --ask dev-db/mysql (Follow instructions on https://wiki.gentoo.org/wiki/MySQL for sql setup)
 
 Createing the required database, tables and columns
 mysql -u root -p
