@@ -2,7 +2,7 @@ from flask import Flask, render_template, request
 from graphData import insert_graph_data
 
 app = Flask(__name__)
-app.config.from_pyfile('../../web_config.cfg')
+app.config.from_pyfile('../web_config.cfg')
 
 def get_ip():
         try:

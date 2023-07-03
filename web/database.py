@@ -1,4 +1,4 @@
-import MySQLdb as mdb
+import pymysql as mdb
 from graph import Node, Edge
 import time
 
