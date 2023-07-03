@@ -34,7 +34,7 @@ sudo apt-get install python-flask python-flup python-pymysql python-pygraphviz
 
 sudo emerge --ask dev-python/flask dev-python/pymysql dev-python/pygraphviz
 
-cd fc00.org/web
+cd fc00.org
 
 Configuring an SQL server:
 On Gentoo:
@@ -71,7 +71,7 @@ cp web_config.example.cfg web_config.cfg
 vim web_config.cfg
 #Set the appropriate MYSQL_DATABASE_USER, MYSQL_DATABASE_PASSWORD, MYSQL_DATABASE_PORT (if sql not running on the default 3306) and MYSQL_DATABASE_HOST (if sql not running on the same machine)
 
-python web.py
+python web/web.py
 ```
 
 Run `web/updateGraph.py` periodically to rerender nodes graph. You may want to customize reverse-proxy IP retrieval logic in web.py.

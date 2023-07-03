@@ -16,7 +16,7 @@ def generate_graph(time_limit=60*60*3):
 
 
 def load_graph_from_db(time_limit):
-    config = Config('./')
+    config = Config('../')
     config.from_pyfile('web_config.cfg')
 
     with NodeDB(config) as db:
