@@ -1,5 +1,6 @@
 .cache
 *.pyc
+web/nodedb
 graph.json
 web_config.cfg
 lighttp.conf

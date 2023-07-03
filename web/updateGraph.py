@@ -11,12 +11,12 @@ def generate_graph(time_limit=60*60*3):
     graph = graphPlotter.position_nodes(nodes, edges)
     json = graphPlotter.get_graph_json(graph)
 
-    with open('./fc00.org/web/static/graph.json', 'w') as f:
+    with open('static/graph.json', 'w') as f:
         f.write(json)
 
 
 def load_graph_from_db(time_limit):
-    config = Config('./')
+    config = Config('../')
     config.from_pyfile('web_config.cfg')
 
     with NodeDB(config) as db:

@@ -6,10 +6,10 @@ import time
 class NodeDB:
     def __init__(self, config):
         self.con = mdb.connect(
-            config['MYSQL_DATABASE_HOST'],
-            config['MYSQL_DATABASE_USER'],
-            config['MYSQL_DATABASE_PASSWORD'],
-            config['MYSQL_DATABASE_DB'])
+            host=config['MYSQL_DATABASE_HOST'],
+            user=config['MYSQL_DATABASE_USER'],
+            passwd=config['MYSQL_DATABASE_PASSWORD'],
+            db=config['MYSQL_DATABASE_DB'])
         self.cur = self.con.cursor()
 
     def __enter__(self):
