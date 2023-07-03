@@ -24,6 +24,7 @@ chmod +x sendGraph.py
 ## Web server
 ```bash
 git clone git@github.com:cjdelisle/fc00.org.git
+cd fc00.org
 git clone git@github.com:zielmicha/nodedb.git web/nodedb
 
 ### Debian/Ubuntu
@@ -34,7 +35,6 @@ sudo apt-get install python-flask python-flup python-pymysql python-pygraphviz
 
 sudo emerge --ask dev-python/flask dev-python/pymysql dev-python/pygraphviz
 
-cd fc00.org
 
 Configuring an SQL server:
 On Gentoo:
